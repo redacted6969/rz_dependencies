@@ -1,0 +1,8 @@
+# Every file in this repo is a signed Windows driver payload. NEVER let
+# git modify byte contents -- .cat files sign hashes of the .inf/.sys/.cat
+# contents and any CRLF <-> LF conversion invalidates every signature,
+# causing SPAPI_E_DRIVER_STORE_ADD_FAILED (0xE000024B) on install.
+*                     binary
+*.sys                 binary
+*.cat                 binary
+*.inf                 binary
